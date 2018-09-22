@@ -1,6 +1,6 @@
 # Adapted from: http://seqanswers.com/forums/showthread.php?t=4914
 
-import HTSeq
+# import HTSeq Only Supported on Mac
 import _pickle as pickle
 
 

@@ -8,7 +8,7 @@ def _load_pkl(directory):
     return data
 
 
-gene_to_cds_length = _load_pkl("/Users/lcwong/Desktop/PyNA/python/vcf/cds.pkl")
+# gene_to_cds_length = _load_pkl("/Users/lcwong/Desktop/PyNA/python/vcf/cds.pkl")
 
 standard = {'PIK3R1', 'PTEN', 'PIK3CG', 'TP53',
             'PTPN11', 'PIK3CA', 'RB1', 'PDGFRA', 'MET',

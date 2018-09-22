@@ -2,7 +2,7 @@ import argparse
 import sys
 
 import python.gtf.request as request
-import python.gtf.transcript as transcript
+# import python.gtf.transcript as transcript
 import python.gtf.parse as parse
 
 
@@ -24,26 +24,26 @@ class PyNA(object):
             exit(1)
         getattr(self, args.mode)()
 
-    def parse(self):
-        parser = argparse.ArgumentParser(
-            description='Parses given gtf file')
-        parser.add_argument('input', help="directory of gtf file")
-        parser.add_argument('-t', '--type', type=str, default=None, help="genome, exon, cds")
-        args = parser.parse_args(sys.argv[2:])
-
-        if args.type is None:
-            parse.gtf(args.input)
-            transcript.create_dict(args.input, "exon")
-            transcript.create_dict(args.input, "CDS")
-
-        elif args.type == 'genome':
-            parse.gtf(args.input)
-
-        elif args.type == 'exon':
-            transcript.create_dict(args.input, args.type)
-
-        elif args.type == 'cds':
-            transcript.create_dict(args.input, args.type.upper())
+    # def parse(self):
+    #     parser = argparse.ArgumentParser(
+    #         description='Parses given gtf file')
+    #     parser.add_argument('input', help="directory of gtf file")
+    #     parser.add_argument('-t', '--type', type=str, default=None, help="genome, exon, cds")
+    #     args = parser.parse_args(sys.argv[2:])
+    #
+    #     if args.type is None:
+    #         parse.gtf(args.input)
+    #         transcript.create_dict(args.input, "exon")
+    #         transcript.create_dict(args.input, "CDS")
+    #
+    #     elif args.type == 'genome':
+    #         parse.gtf(args.input)
+    #
+    #     elif args.type == 'exon':
+    #         transcript.create_dict(args.input, args.type)
+    #
+    #     elif args.type == 'cds':
+    #         transcript.create_dict(args.input, args.type.upper())
 
     def query(self):
         parser = argparse.ArgumentParser(
@@ -107,6 +107,8 @@ class PyNA(object):
         if args.output is not '':
             request.save(data, args.output)
 
+    # ADD INTO README LATER
+
     def query_file(self):
         parser = argparse.ArgumentParser(description='Query based on gene name in file')
 
@@ -122,7 +124,7 @@ class PyNA(object):
         if args.output is not '':
             request.save(data, args.output)
 
-from python.mutation import mutation
-
-mutation.snp("chr10", 87933148, "A")
-# snp("chr2", 208248418, "T")
+# from python.mutation import mutation
+#
+# mutation.snp("chr10", 87933148, "A")
+# # snp("chr2", 208248418, "T")

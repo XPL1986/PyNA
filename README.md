@@ -8,10 +8,11 @@ variant to increase the overall sensitivity and specificity. Along with variant 
 this pipeline also supports the identification of variants demonstrating either allele-specific 
 expression or loss of heterozygosity properties. 
 
-## Getting Started
+## Features
 
-These instructions will get you a copy of the project up and running on your local machine for 
-development and testing purposes. 
+* 
+* 
+* Query by name, location, overlapping regions in  GRCh38/hg38.
 
 ### Prerequisites
 
@@ -45,7 +46,36 @@ git clone https://github.com/lcwong0928/PyNA.git PyNA
 
 ## Usage
 
-Will be documented shortly.
+Query by name about gene of interest based on GRCh38/hg38.
+
+```
+pyna name [-h] [-o OUTPUT] [-f FEATURE] gene [genes ...]
+
+# [-o OUTPUT] saves as txt file at given directory
+# [-f FEATURE] CDS, exon, five_prime_utr, gene, Selenocysteine,
+                  start_codon, stop_codon, three_prime_utr, transcript
+```
+
+
+Query by location based on GRCh38/hg38.
+
+```
+pyna location [-h] [-o OUTPUT] coord [coord ...]
+
+# coord formated as chr:coord, i.e. chr2:208236227 (IDH1)
+# [-o OUTPUT] saves as txt file at given directory
+```
+
+
+Query by overlapping regions based on GRCh38/hg38.
+
+```
+pyna overlap [-h] [-o OUTPUT] coord [coord ...]
+
+# coord formated as chr:coord-coord, i.e. chr2:208236227-208266074 (IDH1)
+# [-o OUTPUT] saves as txt file at given directory
+```
+
 
 
 ### Results
