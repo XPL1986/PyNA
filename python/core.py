@@ -2,7 +2,6 @@ import argparse
 import sys
 
 import python.gtf.request as request
-import python.vcf.pipeline_1 as pipeline_1
 # import python.gtf.transcript as transcript
 import python.gtf.parse as parse
 
@@ -50,8 +49,6 @@ class PyNA(object):
         bundle = [args.blood, args.dna, args.rna]
         pipeline_1.run(bundle)
 
-        if args.output is not '':
-            request.save(data, args.output)
 
 
 
