@@ -11,7 +11,7 @@ expression or loss of heterozygosity properties.
 Calling Variants in RNAseq \
 https://gatkforums.broadinstitute.org/gatk/discussion/3891/calling-variants-in-rnaseq
 
-## Pipeline after GATK protocols
+## PyNA Pipeline workflow
 ![alt text](https://github.com/lcwong0928/PyNA/blob/master/workflow.png)
 
 ## Features
