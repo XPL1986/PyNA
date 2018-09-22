@@ -1,6 +1,12 @@
-# Project Title
+# PyNA
 
-One Paragraph of project description goes here
+This pipeline utilizes Genome Analysis Toolkit's best practices workflow for single 
+nucleotide polymorphism and insertion/deletions as the basic framework to improve upon. 
+The main contribution of this pipeline includes fine search via variant allele frequency,
+biotype, annotations, impact, transcript length, and mapping quality associated with each 
+variant to increase the overall sensitivity and specificity. Along with variant detection, 
+this pipeline also supports the identification of variants demonstrating either allele-specific 
+expression or loss of heterozygosity properties. 
 
 ## Getting Started
 
@@ -8,73 +14,62 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
-What things you need to install the software and how to install them
-
 ```
-Give examples
-```
+Burrows-Wheeler Aligner (BWA) 
+http://bio-bwa.sourceforge.net/
 
-### Installing
+Genomic Analysis Toolkit (GATK) version 3.8
+https://software.broadinstitute.org/gatk/documentation/version-history.php?id=10063&page=2
 
-A step by step series of examples that tell you how to get a development env running
+Picard
+https://broadinstitute.github.io/picard/
 
-Say what the step will be
+STAR: ultrafast universal RNA-seq aligner
+https://academic.oup.com/bioinformatics/article/29/1/15/272537
 
-```
-Give the example
-```
+SnpEff
+http://snpeff.sourceforge.net/
 
-And repeat
-
-```
-until finished
+SnpSift
+http://snpeff.sourceforge.net/SnpSift.html
 ```
 
-End with an example of getting some data out of the system or using it for a little demo
+### Installation
 
-## Running the tests
-
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
 
 ```
-Give an example
+git clone https://github.com/lcwong0928/PyNA.git PyNA
 ```
 
-### And coding style tests
 
-Explain what these tests test and why
+## Usage
+
+Will be documented shortly.
+
+
+### Results
+
+Will be documented shortly.
 
 ```
-Give an example
+Example
 ```
 
-## Deployment
-
-Add additional notes about how to deploy this on a live system
 
 ## Built With
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
+* [PyCharm](https://www.jetbrains.com/pycharm/) - Python IDE used
 
 ## Contributing
 
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
+Please read [CONTRIBUTING.md](https://github.com/lcwong0928/PyNA/blob/master/CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
 
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
 
 ## Authors
 
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
+* **Lawrence C. Wong** - *Initial work* - [lcwong0928](https://github.com/lcwong0928)
 
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+See also the list of [contributors](https://github.com/lcwong0928/PyNA/graphs/contributors) who participated in this project.
 
 ## License
 
@@ -82,6 +77,12 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 ## Acknowledgments
 
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
+* Jiguang Wang, Principal Investigator, The Hong Kong University of Science and Technology
+* Biaobin Jiang, Postdoc Fellow, The Hong Kong University of Science and Technology
+* Quanhua Mu, PhD Student, The Hong Kong University of Science and Technology
+
+This computational pipeline was made possible by the International Undergraduate Research Project 
+program between Massachusetts Institute of Technology and The Hong Kong University of Science and Technology. 
+I would like to express my gratitude to Professor Jiguang Wang at HKUST for his supervision over and support 
+on this project. I would also like to thank Postdoc Fellow Biaobin Jiang, PhD Student Quanhua Mu, and members 
+of the Wang Lab for their guidance and assistance on this research project.
