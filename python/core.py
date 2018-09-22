@@ -13,7 +13,7 @@ class PyNA(object):
             usage='''lms <mode> <func>
             The most commonly used commands are:
                 parse        parses gtf file into dictionary saved as json files
-                query       information based on hg38 annotation file
+                query        information based on hg38 annotation file
 
             © Copyright LMS., Inc., 2018. All rights reserved.''')
 
