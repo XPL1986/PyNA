@@ -8,10 +8,15 @@ variant to increase the overall sensitivity and specificity. Along with variant 
 this pipeline also supports the identification of variants demonstrating either allele-specific 
 expression or loss of heterozygosity properties. 
 
+Calling Variants in RNAseq \
+https://gatkforums.broadinstitute.org/gatk/discussion/3891/calling-variants-in-rnaseq
+
 ## Features
 
-* 
-* 
+* Identification of high impact mutations in RNA sequence data.
+* Support for allele-specific expression or loss of heterozygosity property detection.
+* Pipelines Raw DNA and RNA sequence to Annotated VCF format.
+* Detects consequences in resulting peptide in single nucleotide polymorphism.
 * Query by name, location, overlapping regions in  GRCh38/hg38.
 
 ### Prerequisites
