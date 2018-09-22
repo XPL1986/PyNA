@@ -2,6 +2,7 @@ import argparse
 import sys
 
 import python.gtf.request as request
+import python.vcf.pipeline_1 as pipeline_1
 # import python.gtf.transcript as transcript
 import python.gtf.parse as parse
 
@@ -14,6 +15,7 @@ class PyNA(object):
             The most commonly used commands are:
                 parse        parses gtf file into dictionary saved as json files
                 query        information based on hg38 annotation file
+                pipeline     runs pipeline on input vcf files from [Blood, DNA, RNA]
 
             © Copyright LMS., Inc., 2018. All rights reserved.''')
 
@@ -23,6 +25,37 @@ class PyNA(object):
             parser.print_help()
             exit(1)
         getattr(self, args.mode)()
+
+    def pipeline(self):
+        parser = argparse.ArgumentParser(
+            description='Runs pipeline on input vcf files from [Blood, DNA, RNA]')
+        parser.add_argument('type', help="")
+        args = parser.parse_args(sys.argv[2:3])
+
+        if not hasattr(self, "pipeline_" + args.type):
+            parser.print_help()
+            exit(1)
+        getattr(self, "pipeline_" + args.type)()
+
+    def pipeline_identify(self):
+        parser = argparse.ArgumentParser(description='Pipeline 1')
+
+        parser.add_argument('blood', type=str, help="blood vcf file")
+        parser.add_argument('dna', type=str, help="rna vcf file")
+        parser.add_argument('rna', type=str, help="dna vcf file")
+        parser.add_argument('-o', '--output', type=str, default='', help="saves as txt file at given directory")
+
+        args = parser.parse_args(sys.argv[3:])
+
+        bundle = [args.blood, args.dna, args.rna]
+        pipeline_1.run(bundle)
+
+        if args.output is not '':
+            request.save(data, args.output)
+
+
+
+
 
     # def parse(self):
     #     parser = argparse.ArgumentParser(
