@@ -19,6 +19,7 @@ https://gatkforums.broadinstitute.org/gatk/discussion/3891/calling-variants-in-r
 * Detects consequences in resulting peptide in single nucleotide polymorphism.
 * Query by name, location, overlapping regions in  GRCh38/hg38.
 
+![alt text](https://github.com/lcwong0928/PyNA/blob/master/workflow.png)
 ### Prerequisites
 
 ```
